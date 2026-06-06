@@ -37,7 +37,7 @@ export default function RootLayout({
       lang="en"
       className={`${dieGrotesk.variable} ${akkuratMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-paper text-ink pl-3 md:pl-4">{children}</body>
+      <body className="min-h-full flex flex-col bg-paper text-ink">{children}</body>
     </html>
   );
 }
