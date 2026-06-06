@@ -4,7 +4,7 @@ import { Tile } from "./_components/Tile";
 
 export default function Home() {
   return (
-    <main className="flex h-screen flex-col overflow-hidden bg-paper text-ink">
+    <main className="flex h-screen flex-col overflow-hidden border-l border-ink bg-paper text-ink">
       <PageHeader crumbs={[{ label: "Home" }]} pageNumber={1} />
 
       {/* Hero — tagline up top, blurb at the bottom */}

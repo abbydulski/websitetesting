@@ -30,7 +30,7 @@ export function SubPage({
   const effectiveCrumbs: Crumb[] = crumbs ?? [{ label: section }];
 
   const article = (
-    <article className="flex min-h-screen flex-col bg-paper text-ink">
+    <article className="flex min-h-screen flex-col border-l border-ink bg-paper text-ink">
       <PageHeader
         crumbs={effectiveCrumbs}
         pageNumber={pageNumber}
