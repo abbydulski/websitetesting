@@ -43,7 +43,7 @@ export default function ContactPage() {
       pageNumber={5}
       headline={<>Contact</>}
       sublabel="California + Nevada"
-      lead="Ready to enhance your underground utility operations? Get in touch."
+      lead="Get in touch."
       viewName="panel-contact"
     >
       <div className="grid grid-cols-1 border-b border-ink md:grid-cols-3">
