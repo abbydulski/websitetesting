@@ -54,38 +54,26 @@ export default function AyerPage() {
             <span className="opacity-60">Dashboard</span>
           </div>
         </div>
-        {/* Right — 2x2 grid of text blocks, fills full image height */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2">
-          {blocks.map((b, i) => {
-            const col = i % 2;
-            const row = Math.floor(i / 2);
-            const isLast = i === blocks.length - 1;
-            const cls = [
-              !isLast ? "border-b border-ink md:border-b-0" : "",
-              col === 0 ? "md:border-r border-ink" : "",
-              row === 0 ? "md:border-b md:border-ink" : "",
-            ]
-              .filter(Boolean)
-              .join(" ");
-            return (
-              <div
-                key={b.title}
-                className={`flex flex-col justify-center p-4 md:p-5 ${cls}`}
-              >
-                <h2 className="font-display text-lg font-black uppercase leading-[0.95] tracking-tight md:text-xl">
-                  {b.title}
-                </h2>
-                <p className="mt-2 font-mono text-xs leading-relaxed">
-                  {b.lead}
-                </p>
-                <ul className="mt-2 flex flex-col gap-0.5 font-mono text-[10px] uppercase tracking-[0.08em] md:text-[11px]">
-                  {b.points.map((p) => (
-                    <li key={p}>· {p}</li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+        {/* Right — 2x2 grid with gap-driven dividers */}
+        <div className="grid grid-cols-1 gap-px bg-ink md:grid-cols-2 md:grid-rows-2">
+          {blocks.map((b) => (
+            <div
+              key={b.title}
+              className="flex flex-col justify-center bg-paper p-4 md:p-5"
+            >
+              <h2 className="font-display text-lg font-black uppercase leading-[0.95] tracking-tight md:text-xl">
+                {b.title}
+              </h2>
+              <p className="mt-2 font-mono text-xs leading-relaxed">
+                {b.lead}
+              </p>
+              <ul className="mt-2 flex flex-col gap-0.5 font-mono text-[10px] uppercase tracking-[0.08em] md:text-[11px]">
+                {b.points.map((p) => (
+                  <li key={p}>· {p}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </SubPage>
