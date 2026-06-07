@@ -39,18 +39,16 @@ export default function AyerPage() {
       viewName="panel-ayer"
       back={{ href: "/technology", label: "Technology" }}
     >
-      {/* Photo left, text right — image sized to its native ratio, text column matches */}
+      {/* Photo left, text right — image fills the cell, matched to the right column height */}
       <div className="grid grid-cols-1 border-b border-ink md:grid-cols-2">
-        {/* Left — dashboard, aspect-locked to the SVG (345×219) */}
-        <div className="relative border-b border-ink md:border-b-0 md:border-r">
-          <div className="aspect-[345/219] w-full">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/ayer.svg"
-              alt="Ayer data platform"
-              className="h-full w-full object-cover"
-            />
-          </div>
+        {/* Left — dashboard, fills the cell */}
+        <div className="relative aspect-[345/219] min-h-[260px] border-b border-ink md:aspect-auto md:border-b-0 md:border-r">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/ayer.svg"
+            alt="Ayer data platform"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
           <div className="absolute left-0 right-0 top-0 flex items-center justify-between border-b border-ink bg-paper/85 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.15em] backdrop-blur md:px-6 md:text-xs">
             <span className="font-bold">01 / Platform</span>
             <span className="opacity-60">Dashboard</span>
