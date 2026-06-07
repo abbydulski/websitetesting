@@ -39,15 +39,15 @@ export default function AyerPage() {
       viewName="panel-ayer"
       back={{ href: "/technology", label: "Technology" }}
     >
-      {/* Photo left, text right — image fills the cell, matched to the right column height */}
-      <div className="grid grid-cols-1 border-b border-ink md:grid-cols-2">
-        {/* Left — dashboard, fills the cell */}
+      {/* Photo left, text right — full dashboard visible, image bigger via 3/2 split */}
+      <div className="grid grid-cols-1 border-b border-ink md:grid-cols-[3fr_2fr]">
+        {/* Left — dashboard, full image visible */}
         <div className="relative aspect-[345/219] min-h-[260px] border-b border-ink md:aspect-auto md:border-b-0 md:border-r">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/ayer.svg"
             alt="Ayer data platform"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-contain p-4 pt-12 md:p-6 md:pt-14"
           />
           <div className="absolute left-0 right-0 top-0 flex items-center justify-between border-b border-ink bg-paper/85 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.15em] backdrop-blur md:px-6 md:text-xs">
             <span className="font-bold">01 / Platform</span>
