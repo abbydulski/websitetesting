@@ -4,19 +4,16 @@
 :root[data-theme="paper"] {
   --paper: #eaeaea;
   --ink: #1a1a1a;
-  --img-filter: none;
 }
 
 :root[data-theme="light"] {
   --paper: #ffffff;
   --ink: #1a1a1a;
-  --img-filter: none;
 }
 
 :root[data-theme="dark"] {
   --paper: #1a1a1a;
   --ink: #eaeaea;
-  --img-filter: invert(1);
 }
 
 @theme inline {
@@ -32,10 +29,6 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-
-img {
-  filter: var(--img-filter);
 }
 
 ::view-transition-group(*) {
