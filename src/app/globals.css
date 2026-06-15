@@ -31,6 +31,10 @@ body {
   font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
+:root[data-theme="dark"] .logo-mark {
+  filter: invert(1);
+}
+
 ::view-transition-group(*) {
   animation-duration: 500ms;
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);

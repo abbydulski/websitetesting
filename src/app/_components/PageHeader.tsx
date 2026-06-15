@@ -27,7 +27,7 @@ export function PageHeader({
         <img
           src="/spade-logo.svg"
           alt=""
-          className="h-5 w-auto md:h-6"
+          className="logo-mark h-5 w-auto md:h-6"
         />
         <span className="hidden whitespace-nowrap sm:inline">Advanced Spade Company</span>
         <span className="whitespace-nowrap sm:hidden">ASC</span>
