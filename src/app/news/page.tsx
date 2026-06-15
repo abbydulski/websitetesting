@@ -40,7 +40,7 @@ export default function NewsPage() {
     <SubPage
       section="News"
       pageNumber={6}
-      headline={<>Field Signal</>}
+      headline={<>News</>}
       sublabel="Evidence / The Case for Underground"
       lead="The overhead grid is failing. The underground is mismarked. We track the field reports that prove why this work matters."
       viewName="panel-news"

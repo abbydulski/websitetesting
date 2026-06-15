@@ -13,7 +13,7 @@ export function PageFooter() {
         href="/news"
         className="flex items-center border-b border-ink px-4 py-3 text-[10px] font-bold transition-colors hover:bg-ink hover:text-paper md:border-b-0 md:border-r md:px-5 md:py-4 md:text-xs"
       >
-        Field Signal →
+        News →
       </Link>
       <div className="flex items-center border-b border-ink px-4 py-3 text-[9px] opacity-70 md:border-b-0 md:border-r md:px-5 md:py-4 md:text-[10px]">
         California + Nevada
