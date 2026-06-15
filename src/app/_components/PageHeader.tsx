@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 type Crumb = { label: string; separator?: "//" | "\\\\" };
 
@@ -16,7 +17,7 @@ export function PageHeader({
   back,
 }: PageHeaderProps) {
   return (
-    <header className="grid grid-cols-[auto_1fr_auto] items-stretch border-b border-ink font-display text-xs font-bold uppercase tracking-tight md:text-sm">
+    <header className="grid grid-cols-[auto_1fr_auto_auto] items-stretch border-b border-ink font-display text-xs font-bold uppercase tracking-tight md:text-sm">
       <Link
         href={homeHref}
         className="flex items-center gap-2 border-r border-ink px-3 py-3 md:gap-3 md:px-6 md:py-4"
@@ -53,6 +54,9 @@ export function PageHeader({
             {c.label}
           </span>
         ))}
+      </div>
+      <div className="flex items-center border-r border-ink">
+        <ThemeToggle />
       </div>
       <div className="flex items-center px-4 py-3 font-mono md:px-6 md:py-4">
         {String(pageNumber).padStart(2, "0")}

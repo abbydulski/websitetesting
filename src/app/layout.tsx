@@ -35,8 +35,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="paper"
       className={`${dieGrotesk.variable} ${akkuratMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('asc-theme');if(t==='paper'||t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-paper text-ink">{children}</body>
     </html>
   );
