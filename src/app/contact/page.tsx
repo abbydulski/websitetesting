@@ -12,9 +12,9 @@ type Card = {
 const cards: Card[] = [
   {
     number: "01",
-    label: "General",
-    value: "INFO@ASPADECO.COM",
-    href: "mailto:info@aspadeco.com",
+    label: "Careers",
+    value: "CAREERS@ASPADECO.COM",
+    href: "mailto:careers@aspadeco.com",
     cta: "→ Open mail",
     borderClass: "border-b border-ink md:border-b-0 md:border-r",
   },
@@ -56,7 +56,7 @@ export default function ContactPage() {
             <span className="font-mono text-[10px] uppercase tracking-[0.15em] md:text-xs">
               {c.number} / {c.label}
             </span>
-            <span className="font-display text-xl font-black uppercase leading-[1.05] tracking-tight break-words md:text-2xl lg:text-3xl">
+            <span className="font-display text-[clamp(0.9rem,2.1vw,1.5rem)] font-black uppercase leading-[1.05] tracking-tight whitespace-nowrap">
               {c.value}
             </span>
             <span className="mt-auto font-mono text-[10px] uppercase tracking-[0.15em] opacity-60 group-hover:opacity-100 md:text-xs">
