@@ -14,6 +14,7 @@ type SubPageProps = {
   viewName?: string;
   back?: { href: string; label: string };
   topAccent?: ReactNode;
+  leftAccent?: ReactNode;
   children?: ReactNode;
 };
 
@@ -27,12 +28,13 @@ export function SubPage({
   viewName,
   back = { href: "/", label: "Home" },
   topAccent,
+  leftAccent,
   children,
 }: SubPageProps) {
   const effectiveCrumbs: Crumb[] = crumbs ?? [{ label: section }];
 
-  const article = (
-    <article className="flex min-h-screen flex-col border-l border-ink bg-paper text-ink">
+  const inner = (
+    <>
       <PageHeader
         crumbs={effectiveCrumbs}
         pageNumber={pageNumber}
@@ -56,6 +58,17 @@ export function SubPage({
       </section>
       {children ? <div className="flex-1">{children}</div> : <div className="flex-1" />}
       <PageFooter />
+    </>
+  );
+
+  const article = leftAccent ? (
+    <article className="grid min-h-screen grid-cols-[24px_1fr] bg-paper text-ink md:grid-cols-[32px_1fr]">
+      <aside className="border-r border-ink">{leftAccent}</aside>
+      <div className="flex min-h-screen flex-col">{inner}</div>
+    </article>
+  ) : (
+    <article className="flex min-h-screen flex-col border-l border-ink bg-paper text-ink">
+      {inner}
     </article>
   );
 
