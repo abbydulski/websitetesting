@@ -1,13 +1,13 @@
 import { SubPage } from "../../_components/SubPage";
 
-const utilities = [
-  { name: "Electrical", hex: "#FD0009" },
-  { name: "Gas", hex: "#ECFC15" },
-  { name: "Communication", hex: "#FF6621" },
-  { name: "Water", hex: "#00B0FF" },
-  { name: "Sewer", hex: "#41E24D" },
-  { name: "Survey", hex: "#FF4A78" },
-  { name: "Irrigation", hex: "#8930AA" },
+const utilityColors = [
+  "#FD0009",
+  "#ECFC15",
+  "#FF6621",
+  "#00B0FF",
+  "#41E24D",
+  "#FF4A78",
+  "#8930AA",
 ];
 
 const blocks = [
@@ -49,66 +49,57 @@ export default function AyerPage() {
       viewName="panel-ayer"
       back={{ href: "/technology", label: "Technology" }}
     >
-      {/* Photo left, 2x2 text grid right — image at natural ratio, text matches height */}
-      <div className="grid grid-cols-1 border-b border-ink md:grid-cols-[3fr_2fr]">
-        {/* Left — dashboard, locked to native ratio so the full image fits */}
-        <div className="relative aspect-[345/219] border-b border-ink md:border-b-0 md:border-r">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/ayer.svg"
-            alt="Ayer data platform"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute left-0 right-0 top-0 flex items-center justify-between border-b border-ink bg-paper/85 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.15em] backdrop-blur md:px-6 md:text-xs">
-            <span className="font-bold">01 / Platform</span>
-            <span className="opacity-60">Dashboard</span>
+      {/* Color sidebar | dashboard | 2x2 text grid */}
+      <div className="grid grid-cols-[20px_1fr] border-b border-ink md:grid-cols-[28px_1fr]">
+        {/* Left — vertical utility color strip (decorative) */}
+        <div className="flex flex-col border-r border-ink" aria-hidden="true">
+          {utilityColors.map((hex) => (
+            <div
+              key={hex}
+              className="flex-1"
+              style={{ backgroundColor: hex }}
+            />
+          ))}
+        </div>
+
+        {/* Right — dashboard + text grid */}
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr]">
+          {/* Dashboard, locked to native ratio so the full image fits */}
+          <div className="relative aspect-[345/219] border-b border-ink md:border-b-0 md:border-r">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/ayer.svg"
+              alt="Ayer data platform"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute left-0 right-0 top-0 flex items-center justify-between border-b border-ink bg-paper/85 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.15em] backdrop-blur md:px-6 md:text-xs">
+              <span className="font-bold">01 / Platform</span>
+              <span className="opacity-60">Dashboard</span>
+            </div>
+          </div>
+          {/* 2x2 grid with gap-driven dividers */}
+          <div className="grid grid-cols-1 gap-px bg-ink md:grid-cols-2 md:grid-rows-2">
+            {blocks.map((b) => (
+              <div
+                key={b.title}
+                className="flex flex-col justify-center bg-paper p-4 md:p-5"
+              >
+                <h2 className="font-display text-lg font-black uppercase leading-[0.95] tracking-tight md:text-xl">
+                  {b.title}
+                </h2>
+                <p className="mt-2 font-mono text-xs leading-relaxed">
+                  {b.lead}
+                </p>
+                <ul className="mt-2 flex flex-col gap-0.5 font-mono text-[10px] uppercase tracking-[0.08em] md:text-[11px]">
+                  {b.points.map((p) => (
+                    <li key={p}>· {p}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
-        {/* Right — 2x2 grid with gap-driven dividers */}
-        <div className="grid grid-cols-1 gap-px bg-ink md:grid-cols-2 md:grid-rows-2">
-          {blocks.map((b) => (
-            <div
-              key={b.title}
-              className="flex flex-col justify-center bg-paper p-4 md:p-5"
-            >
-              <h2 className="font-display text-lg font-black uppercase leading-[0.95] tracking-tight md:text-xl">
-                {b.title}
-              </h2>
-              <p className="mt-2 font-mono text-xs leading-relaxed">
-                {b.lead}
-              </p>
-              <ul className="mt-2 flex flex-col gap-0.5 font-mono text-[10px] uppercase tracking-[0.08em] md:text-[11px]">
-                {b.points.map((p) => (
-                  <li key={p}>· {p}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
       </div>
-
-      {/* Utility color legend — the color standard Ayer renders against */}
-      <section className="border-b border-ink">
-        <div className="flex items-center justify-between border-b border-ink px-4 py-2 font-mono text-[10px] uppercase tracking-[0.15em] md:px-6 md:text-xs">
-          <span className="font-bold">02 / Utility Labeling</span>
-          <span className="opacity-60">Color Standard</span>
-        </div>
-        <div className="grid grid-cols-2 gap-px bg-ink sm:grid-cols-4 lg:grid-cols-7">
-          {utilities.map((u) => (
-            <div key={u.name} className="flex flex-col bg-paper">
-              <div className="h-14 md:h-16" style={{ backgroundColor: u.hex }} />
-              <div className="flex flex-col gap-1 p-3 md:p-4">
-                <span className="font-display text-xs font-black uppercase leading-none tracking-tight md:text-sm">
-                  {u.name}
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.15em] opacity-60">
-                  {u.hex}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
     </SubPage>
   );
 }
