@@ -13,6 +13,7 @@ type SubPageProps = {
   lead?: ReactNode;
   viewName?: string;
   back?: { href: string; label: string };
+  topAccent?: ReactNode;
   children?: ReactNode;
 };
 
@@ -25,6 +26,7 @@ export function SubPage({
   lead,
   viewName,
   back = { href: "/", label: "Home" },
+  topAccent,
   children,
 }: SubPageProps) {
   const effectiveCrumbs: Crumb[] = crumbs ?? [{ label: section }];
@@ -36,6 +38,7 @@ export function SubPage({
         pageNumber={pageNumber}
         back={back}
       />
+      {topAccent ? <div className="border-b border-ink">{topAccent}</div> : null}
       <section className="border-b border-ink px-4 py-8 md:px-12 md:py-16">
         <h1 className="font-display text-[clamp(2.25rem,8vw,7rem)] font-black uppercase leading-[0.88] tracking-[-0.02em]">
           {headline}

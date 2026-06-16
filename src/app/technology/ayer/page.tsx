@@ -48,26 +48,26 @@ export default function AyerPage() {
       lead="Field data, planning, mapping, and physics — unified in one platform that all stakeholders can see and shape."
       viewName="panel-ayer"
       back={{ href: "/technology", label: "Technology" }}
-    >
-      {/* Utility color strip across the top */}
-      <div className="grid grid-cols-7 border-b border-ink">
-        {utilities.map((u, i) => (
-          <div
-            key={u.name}
-            className={`flex flex-col ${i < utilities.length - 1 ? "border-r border-ink" : ""}`}
-          >
+      topAccent={
+        <div className="grid grid-cols-7">
+          {utilities.map((u, i) => (
             <div
-              className="h-6 md:h-8"
-              style={{ backgroundColor: u.hex }}
-              aria-hidden="true"
-            />
-            <div className="flex flex-1 items-center justify-center px-1 py-2 text-center font-mono text-[9px] font-bold uppercase leading-tight tracking-[0.08em] md:text-[11px] md:tracking-[0.12em]">
-              {u.name}
+              key={u.name}
+              className={`flex flex-col ${i < utilities.length - 1 ? "border-r border-ink" : ""}`}
+            >
+              <div
+                className="h-6 md:h-8"
+                style={{ backgroundColor: u.hex }}
+                aria-hidden="true"
+              />
+              <div className="flex flex-1 items-center justify-center px-1 py-2 text-center font-mono text-[9px] font-bold uppercase leading-tight tracking-[0.08em] md:text-[11px] md:tracking-[0.12em]">
+                {u.name}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-
+          ))}
+        </div>
+      }
+    >
       {/* Dashboard + 2x2 text grid */}
       <div className="grid grid-cols-1 border-b border-ink md:grid-cols-[3fr_2fr]">
         {/* Dashboard, locked to native ratio so the full image fits */}
