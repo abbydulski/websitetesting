@@ -45,13 +45,13 @@ export default function NewsPage() {
       lead="The overhead grid is failing. The underground is mismarked. We track the field reports that prove why this work matters."
       viewName="panel-news"
     >
-      {/* Banner strip — composite of recent field incidents, native 2366×480 ratio */}
+      {/* Banner strip — fixed 140px on mobile (object-cover), native ratio at md+ */}
       <div className="w-full border-b border-ink">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/news.png"
           alt=""
-          className="block h-auto w-full"
+          className="block h-[140px] w-full object-cover md:h-auto"
         />
       </div>
       <div className="grid grid-cols-1 border-b border-ink md:grid-cols-2">
@@ -61,7 +61,7 @@ export default function NewsPage() {
             href={a.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group flex min-h-[320px] flex-col gap-4 p-6 transition-colors hover:bg-ink hover:text-paper md:min-h-[420px] md:p-10 ${
+            className={`group flex min-h-[320px] flex-col gap-4 px-6 pb-6 pt-4 transition-colors hover:bg-ink hover:text-paper md:min-h-[420px] md:px-10 md:pb-10 md:pt-5 ${
               i === 0
                 ? "border-b border-ink md:border-b-0 md:border-r"
                 : ""
