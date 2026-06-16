@@ -45,6 +45,15 @@ export default function NewsPage() {
       lead="The overhead grid is failing. The underground is mismarked. We track the field reports that prove why this work matters."
       viewName="panel-news"
     >
+      {/* Banner strip — composite of recent field incidents */}
+      <div className="relative h-32 w-full overflow-hidden border-b border-ink md:h-40">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/news.png"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
       <div className="grid grid-cols-1 border-b border-ink md:grid-cols-2">
         {articles.map((a, i) => (
           <a
