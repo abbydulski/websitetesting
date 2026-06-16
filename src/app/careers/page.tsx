@@ -13,7 +13,7 @@ export default function CareersPage() {
       lead="Join the team building the next generation of underground utility detection, mapping, and drilling technology."
       viewName="panel-careers"
     >
-      <div className="px-6 py-10 md:px-12 md:py-14">
+      <div className="flex flex-col items-start gap-5 px-6 py-10 md:px-12 md:py-14">
         <a
           href={APPLY_URL}
           target="_blank"
@@ -22,6 +22,15 @@ export default function CareersPage() {
         >
           View open roles →
         </a>
+        <p className="font-mono text-[10px] uppercase tracking-[0.15em] md:text-xs">
+          Or reach us at{" "}
+          <a
+            href="mailto:careers@aspadeco.com"
+            className="font-bold underline-offset-4 hover:underline"
+          >
+            careers@aspadeco.com
+          </a>
+        </p>
       </div>
     </SubPage>
   );
