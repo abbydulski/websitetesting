@@ -48,18 +48,15 @@ export default function AyerPage() {
       lead="Field data, planning, mapping, and physics — unified in one platform that all stakeholders can see and shape."
       viewName="panel-ayer"
       back={{ href: "/technology", label: "Technology" }}
-      leftAccent={
-        <div className="flex h-full flex-col">
+      topAccent={
+        <div className="grid grid-cols-7">
           {utilities.map((u, i) => (
             <div
               key={u.name}
-              className={`relative flex flex-1 items-center justify-center ${i < utilities.length - 1 ? "border-b border-ink" : ""}`}
+              className={`flex h-10 items-center justify-center md:h-12 ${i < utilities.length - 1 ? "border-r border-ink" : ""}`}
               style={{ backgroundColor: u.hex }}
             >
-              <span
-                className="font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-ink mix-blend-difference md:text-[10px]"
-                style={{ writingMode: "vertical-rl" }}
-              >
+              <span className="font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-ink mix-blend-difference md:text-[11px] md:tracking-[0.18em]">
                 {u.name}
               </span>
             </div>
