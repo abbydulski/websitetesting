@@ -64,10 +64,10 @@ export default function AyerPage() {
         </div>
       }
     >
-      {/* Dashboard + 2x2 text grid */}
-      <div className="grid grid-cols-1 border-b border-ink md:grid-cols-[3fr_2fr]">
+      {/* Dashboard + 2x2 text grid — side-by-side only at lg+ so cells stay readable */}
+      <div className="grid grid-cols-1 border-b border-ink lg:grid-cols-[3fr_2fr]">
         {/* Dashboard, locked to native ratio so the full image fits */}
-        <div className="relative aspect-[345/219] border-b border-ink md:border-b-0 md:border-r">
+        <div className="relative aspect-[345/219] border-b border-ink lg:border-b-0 lg:border-r">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/ayer.svg"
@@ -80,19 +80,19 @@ export default function AyerPage() {
           </div>
         </div>
         {/* 2x2 grid with gap-driven dividers */}
-        <div className="grid grid-cols-1 gap-px bg-ink md:grid-cols-2 md:grid-rows-2">
+        <div className="grid grid-cols-1 gap-px bg-ink lg:grid-cols-2 lg:grid-rows-2">
           {blocks.map((b) => (
             <div
               key={b.title}
-              className="flex flex-col justify-center bg-paper p-4 md:p-5"
+              className="flex flex-col justify-center bg-paper p-4 md:p-6 lg:p-5"
             >
-              <h2 className="font-display text-lg font-black uppercase leading-[0.95] tracking-tight md:text-xl">
+              <h2 className="font-display text-lg font-black uppercase leading-[0.95] tracking-tight md:text-2xl lg:text-xl">
                 {b.title}
               </h2>
-              <p className="mt-2 font-mono text-xs leading-relaxed">
+              <p className="mt-2 font-mono text-xs leading-relaxed md:text-sm lg:text-xs">
                 {b.lead}
               </p>
-              <ul className="mt-2 flex flex-col gap-0.5 font-mono text-[10px] uppercase tracking-[0.08em] md:text-[11px]">
+              <ul className="mt-2 flex flex-col gap-0.5 font-mono text-[10px] uppercase tracking-[0.08em] md:text-xs lg:text-[11px]">
                 {b.points.map((p) => (
                   <li key={p}>· {p}</li>
                 ))}
