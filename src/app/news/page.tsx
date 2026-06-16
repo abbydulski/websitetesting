@@ -38,9 +38,9 @@ const articles: Article[] = [
 export default function NewsPage() {
   return (
     <SubPage
-      section="News"
+      section="The Problem"
       pageNumber={6}
-      headline={<>News</>}
+      headline={<>The Problem</>}
       sublabel="Evidence / The Case for Underground"
       lead="The overhead grid is failing. The underground is mismarked. We track the field reports that prove why this work matters."
       viewName="panel-news"
