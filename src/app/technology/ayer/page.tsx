@@ -1,5 +1,15 @@
 import { SubPage } from "../../_components/SubPage";
 
+const utilities = [
+  { name: "Electrical", hex: "#FD0009" },
+  { name: "Gas", hex: "#ECFC15" },
+  { name: "Communication", hex: "#FF6621" },
+  { name: "Water", hex: "#00B0FF" },
+  { name: "Sewer", hex: "#41E24D" },
+  { name: "Survey", hex: "#FF4A78" },
+  { name: "Irrigation", hex: "#8930AA" },
+];
+
 const blocks = [
   {
     title: "Web Application",
@@ -76,6 +86,29 @@ export default function AyerPage() {
           ))}
         </div>
       </div>
+
+      {/* Utility color legend — the color standard Ayer renders against */}
+      <section className="border-b border-ink">
+        <div className="flex items-center justify-between border-b border-ink px-4 py-2 font-mono text-[10px] uppercase tracking-[0.15em] md:px-6 md:text-xs">
+          <span className="font-bold">02 / Utility Labeling</span>
+          <span className="opacity-60">Color Standard</span>
+        </div>
+        <div className="grid grid-cols-2 gap-px bg-ink sm:grid-cols-4 lg:grid-cols-7">
+          {utilities.map((u) => (
+            <div key={u.name} className="flex flex-col bg-paper">
+              <div className="h-14 md:h-16" style={{ backgroundColor: u.hex }} />
+              <div className="flex flex-col gap-1 p-3 md:p-4">
+                <span className="font-display text-xs font-black uppercase leading-none tracking-tight md:text-sm">
+                  {u.name}
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.15em] opacity-60">
+                  {u.hex}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </SubPage>
   );
 }
