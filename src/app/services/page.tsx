@@ -91,7 +91,7 @@ export default function ServicesPage() {
       pageNumber={2}
       headline={<>Services</>}
       sublabel="Maps · Damage Prevention · Trenchless Construction"
-      lead="Underground utility detection, mapping, and trenchless construction — delivered as one continuous workflow."
+      lead="Underground utility detection, mapping, and trenchless construction. Delivered as one continuous workflow."
       viewName="panel-services"
     >
       <div className="flex flex-col">
