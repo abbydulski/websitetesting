@@ -130,30 +130,10 @@ Get in touch.
 ---
 
 
-## The Problem page
-
-**Subhead**
-Evidence / The Case for Underground
-
-**Intro paragraph**
-The overhead grid is failing. The underground is mismarked. We track the field reports that prove why this work matters.
-
-### Article 1 — CBS Sacramento, June 8, 2026
-Headline: PG&E says Northern California power shutoffs expected to continue Thursday
-Summary: PG&E cut power to nearly 5,000 customers across 8 Northern California counties — a public-safety shutoff to keep overhead lines from sparking wildfires in red-flag wind conditions.
-Tag: The Overhead Grid is Failing
-
-### Article 2 — Boyle Heights Beat, June 9, 2026
-Headline: Company tied to East LA oil spill says pipeline was improperly marked
-Summary: HP Communications alleges the pipeline operator failed to properly mark the line's location before excavation — leading to a strike and crude-oil spill onto East LA streets.
-Tag: Why We Mark + Verify
-
----
-
 ## Site-wide
 
 **Header wordmark**
 Full: Advanced Spade Company · Short (mobile): ASC
 
 **Footer**
-© [current year] Advanced Spade Co · The Problem → · California + Nevada · Made in America 🇺🇸
+© [current year] Advanced Spade Co · California + Nevada · Made in America 🇺🇸

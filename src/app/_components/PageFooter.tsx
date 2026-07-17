@@ -1,20 +1,12 @@
-import Link from "next/link";
-
 export function PageFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-auto grid grid-cols-1 border-t border-ink font-mono uppercase leading-relaxed tracking-[0.15em] md:grid-cols-[1fr_auto_auto_auto]">
+    <footer className="mt-auto grid grid-cols-1 border-t border-ink font-mono uppercase leading-relaxed tracking-[0.15em] md:grid-cols-[1fr_auto_auto]">
       <div className="flex items-center gap-3 border-b border-ink px-4 py-3 text-[10px] md:border-b-0 md:border-r md:px-6 md:py-4 md:text-xs">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/spade-logo.svg" alt="" className="logo-mark h-4 w-auto" />
         <span className="font-bold">© {year} Advanced Spade Co</span>
       </div>
-      <Link
-        href="/news"
-        className="flex items-center border-b border-ink px-4 py-3 text-[10px] font-bold transition-colors hover:bg-ink hover:text-paper md:border-b-0 md:border-r md:px-5 md:py-4 md:text-xs"
-      >
-        The Problem →
-      </Link>
       <div className="flex items-center border-b border-ink px-4 py-3 text-[9px] opacity-70 md:border-b-0 md:border-r md:px-5 md:py-4 md:text-[10px]">
         California + Nevada
       </div>
