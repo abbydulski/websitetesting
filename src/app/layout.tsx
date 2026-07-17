@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { NavigationTransition } from "./_components/NavigationTransition";
 
 const dieGrotesk = localFont({
   src: [
@@ -46,10 +45,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-paper text-ink">
-        {children}
-        <NavigationTransition />
-      </body>
+      <body className="min-h-full flex flex-col bg-paper text-ink">{children}</body>
     </html>
   );
 }
