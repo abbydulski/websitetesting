@@ -41,7 +41,7 @@ export default function ContactPage() {
     <SubPage
       section="Contact"
       pageNumber={5}
-      headline={<>Contact</>}
+      headline="Contact"
       sublabel="California + Nevada"
       lead="Get in touch."
       viewName="panel-contact"

@@ -43,7 +43,7 @@ export default function AyerPage() {
       section="Ayer"
       crumbs={[{ label: "Technology" }, { label: "Ayer" }]}
       pageNumber="3.2"
-      headline={<>Ayer</>}
+      headline="Ayer"
       sublabel="Data Platform"
       lead="Field data, planning, mapping, and physics — unified in one platform that all stakeholders can see and shape."
       viewName="panel-ayer"

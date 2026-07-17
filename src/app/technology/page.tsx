@@ -6,7 +6,7 @@ export default function TechnologyPage() {
     <SubPage
       section="Technology"
       pageNumber={3}
-      headline={<>Technology</>}
+      headline="Technology"
       sublabel="Hardware + Software for underground work"
       lead="A connected stack — purpose-built sensors, field hardware, and a data platform that turns subsurface signals into decisions."
       viewName="panel-technology"

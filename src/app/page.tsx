@@ -1,6 +1,7 @@
 import { PageHeader } from "./_components/PageHeader";
 import { PageFooter } from "./_components/PageFooter";
 import { Tile } from "./_components/Tile";
+import { Typewriter } from "./_components/Typewriter";
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
       {/* Hero — tagline up top, blurb at the bottom */}
       <section className="flex flex-1 flex-col justify-between border-b border-ink px-6 py-8 md:px-12 md:py-12">
         <h1 className="font-display text-[clamp(2rem,10vw,10rem)] font-black uppercase leading-[0.85] tracking-[-0.03em]">
-          Proven
-          <br />
-          Underground.
+          <Typewriter text={"Proven\nUnderground."} />
         </h1>
         <p className="max-w-2xl font-mono text-[clamp(0.8125rem,1.4vw,1.0625rem)] uppercase leading-relaxed tracking-[0.06em] md:tracking-[0.12em]">
           The overhead grid is failing. Advanced Spade Company builds precision

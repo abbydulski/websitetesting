@@ -29,7 +29,7 @@ export default function CrktPage() {
       section="CRKT"
       crumbs={[{ label: "Technology" }, { label: "CRKT" }]}
       pageNumber="3.1"
-      headline={<>CRKT</>}
+      headline="CRKT"
       sublabel="Handheld Utility Locator"
       lead="A software-defined locator built for the field. Modular antennas, real-time tuning, and over-the-air upgrades that turn one device into many."
       viewName="panel-crkt"

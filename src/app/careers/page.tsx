@@ -8,7 +8,7 @@ export default function CareersPage() {
     <SubPage
       section="Careers"
       pageNumber={4}
-      headline={<>Careers</>}
+      headline="Careers"
       sublabel="Build something that matters underground"
       lead="Join the team building the next generation of underground utility detection, mapping, and drilling technology."
       viewName="panel-careers"
